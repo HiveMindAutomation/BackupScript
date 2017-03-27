@@ -1,40 +1,40 @@
-#BackupScript
-##An AppleScript Wrapper for an rSync to a Network Drive
+# BackupScript
+## An AppleScript Wrapper for an rSync to a Network Drive
 
 <p>BackupScript has been created as a simple interface for L1 Helpdesk Staff to backup a Mac User Folder to a Network Location without needing to remember the syntax for an rsync command
 <p> BackupScript includes an _exclude_ block to reduce downloading of Music, Movies, Photos folders
 
-#Environment specific variables
+# Environment specific variables
 These Variables **must** be modiifed before running in **your** environment
 
-##Define protocol for Server connection.
-###CIFS, AFP, and SMB should work here.
+## Define protocol for Server connection.
+### CIFS, AFP, and SMB should work here.
 `set protocol to "smb://"`
 
-##Variables for Location 1 (Main Campus)
+## Variables for Location 1 (Main Campus)
 `set location1Name to "Ridgeway"`
-##Server Name/Address
+## Server Name/Address
 `set location1Server to "casper"`
 
-##Variables for Location 2 (Second Campus)
+## Variables for Location 2 (Second Campus)
 `set location2Name to "Plenty"`
-##Server Name/Address
+## Server Name/Address
 `set location2Server to "spooky"`
 
-##Types of Accounts
+## Types of Accounts
 `set userLabel1 to "Staff"`
 `set userLabel2 to "Student"`
 
-##Name of folders on Network Share for backups
+## Name of folders on Network Share for backups
 `set label1Target to "staffback"`
 `set label2Target to "stuback"`
 
-##Folders to exclude from rsync - Folder names with spaces should be quoted with single quotes.
+## Folders to exclude from rsync - Folder names with spaces should be quoted with single quotes.
 `set excludes to "Movies,Music,Pictures,Dropbox,'Google Drive', Parallels"`
 
-##Display a warning to Users that they should connect to Ethernet - Optional
+## Display a warning to Users that they should connect to Ethernet - Optional
 `display dialog "It is recommended that you connect the computer to Ethernet prior to running this tool. Backups over Wi-Fi will take an extremely long time in comparison" with icon caution`
 
 
-##Packaging
+## Packaging
 <p>In my environment, This script gets exported from Script Editor as a run-only Application Bundle and then packaged into an installer using JAMF Composer. The installer places the .app bundle into /Applications/Utilities/
