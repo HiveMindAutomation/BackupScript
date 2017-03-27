@@ -1,0 +1,8 @@
+#BackupScript
+##An AppleScript Wrapper for an rSync to a Network Drive
+
+<p>BackupScript has been created as a simple interface for L1 Helpdesk Staff to backup a Mac User Folder to a Network Location without needing to remember the syntax for an rsync command
+<p> BackupScript includes an _exclude_ block to reduce downloading of Music, Movies, Photos folders
+
+##Packaging
+<p>In my environment, This script gets exported from Script Editor as a run-only Application Bundle and then packaged into an installer using JAMF Composer. The installer places the .app bundle into /Applications/Utilities/
